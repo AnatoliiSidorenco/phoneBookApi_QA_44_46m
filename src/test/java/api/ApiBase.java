@@ -6,8 +6,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class ApiBase {   // "Visual Studio 2019 "Dark" theme"
-
+public class ApiBase {
+// todo - создаю переменную как в Postmann,что б потом переедать их в автоматических настройках разово
     final String BASE_URI = "http://phonebook.telran-edu.de:8080/";
     final String API_KEY = "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6InRlc3RAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MjEwNjk3ODI5Nn0.GM1wsoRV2QoAsD6wKmIk7N49DDpuCejK4BC9H9YItJvesH5vft8HO2uqTPnGQJwJ5oXKS2OILqP1yoanMnIMkA";
 
@@ -29,10 +29,10 @@ public class ApiBase {   // "Visual Studio 2019 "Dark" theme"
         return response;
     }
 
-    public Response getRequestWithParam(String endPoint, Integer responseCode, int id) {
+    public Response getRequestWithParam(String endPoint, Integer responseCode,String paramName, int id) {
         Response response = RestAssured.given()
                 .spec(specification)
-                .pathParam("id", id)
+                .pathParam(paramName, id)
                 .when()
                 .log().all()
                 .get(endPoint)
@@ -79,4 +79,5 @@ public class ApiBase {   // "Visual Studio 2019 "Dark" theme"
         response.then().assertThat().statusCode(responseCode);
         return response;
     }
+
 }
