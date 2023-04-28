@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860c9b6-0b80-43a6-992c-4c3e8578e693" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/email/EmailApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/phone/PhoneApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonEmailTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonPhoneTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/schemas/email/EmailDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/schemas/phone/PhoneDto.java" afterDir="false" />
+    <list default="true" id="6860c9b6-0b80-43a6-992c-4c3e8578e693" name="Changes" comment="phone commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/helpers/EmailHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/helpers/PhoneHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/ApiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/ContactApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/ContactApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/email/EmailApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/email/EmailApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/phone/PhoneApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/phone/PhoneApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonEmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonEmailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonPhoneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonPhoneTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Education/QA_44_46m/All_In_QA/QA_Leo/phoneBookApi_QA_44_46m",
+    "last_opened_file_path": "D:/Education/QA_44_46m/All_In_QA/QA_Leo/lessonApiTests",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -217,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681745688619</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="phone commit">
+      <created>1682446324338</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682446324338</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +238,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="gh" />
     <MESSAGE value="gh1" />
-    <option name="LAST_COMMIT_MESSAGE" value="gh1" />
+    <MESSAGE value="phone commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="phone commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

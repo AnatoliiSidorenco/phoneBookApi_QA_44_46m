@@ -2,41 +2,40 @@ package api.phone;
 
 import api.ApiBase;
 import io.restassured.response.Response;
-import schemas.email.EmailDto;
 import schemas.phone.PhoneDto;
 
 public class PhoneApi extends ApiBase {
     Response response;
     PhoneDto dto;
 
-    public PhoneDto randomDataForCreatePhone() {
+    public PhoneDto randomDataForCreatePhone(Integer contactId) {
         dto = new PhoneDto();
         dto.setCountryCode("+49");
         dto.setPhoneNumber("15487789652");
-        dto.setContactId(4804);
+        dto.setContactId(contactId);
         return dto;
     }
 
     int contactId;
 
-    public PhoneDto randomDataForExistingPhone(Integer phoneId) {
+    public PhoneDto randomDataForExistingPhone(Integer phoneId,Integer contactId) {
         dto = new PhoneDto();
         dto.setCountryCode("+49");
         dto.setPhoneNumber("15487789652");
-        dto.setContactId(4804);
+        dto.setContactId(contactId);
         dto.setId(phoneId);
         return dto;
     }
 
-    public void createPhone(Integer code) {
+    public void createPhone(Integer code, Integer contactId) {
         String endPoint = "/api/phone";
-        postRequest(endPoint, code, randomDataForCreatePhone());
+        postRequest(endPoint, code, randomDataForCreatePhone(contactId));
 
     }
 
-    public void updatePhone(Integer code, Integer phoneId) {
+    public void updatePhone(Integer code, Integer phoneId, Integer contactId) {
         String endPoint = "/api/phone";
-        putRequest(endPoint, code, randomDataForExistingPhone(phoneId));
+        putRequest(endPoint, code, randomDataForExistingPhone(phoneId,contactId));
     }
 
     public void deletePhone(Integer code, int phoneId) {
@@ -50,9 +49,9 @@ public class PhoneApi extends ApiBase {
         return response;
     }
 
-    public Response getAllPhoneByContactId(Integer code) {
+    public Response getAllPhoneByContactId(Integer code,Integer contactId) {
         String endPoint = "/api/phone/{contactId}/all";
-        response = getRequestWithParam(endPoint, code, "contactId", 4804);
+        response = getRequestWithParam(endPoint, code, "contactId", contactId);
         return response;
     }
 }

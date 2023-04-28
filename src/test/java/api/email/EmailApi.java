@@ -8,33 +8,33 @@ public class EmailApi extends ApiBase {
     Response response;
     EmailDto dto;
 
-    public EmailDto randomDataForEmail() {
+    public EmailDto randomDataForEmail(Integer contactId) {
         dto = new EmailDto();
         dto.setEmail("sty@gmail.com");
-        dto.setContactId(4804);
+        dto.setContactId(contactId);
         return dto;
     }
 
-    public EmailDto randomDataForAddEmail(Integer emailId) {
+    public EmailDto randomDataForAddEmail(Integer emailId,Integer contactId) {
         dto = new EmailDto();
         dto.setEmail("st@gmail.com");
-        dto.setContactId(4804);
+        dto.setContactId(contactId);
         dto.setId(emailId);
         return dto;
     }
 
     //создаю метод для создания имейла
-    public void addEmail(Integer code) {
+    public void addEmail(Integer code, Integer contactId) {
         String endPoint = "/api/email";
-        postRequest(endPoint, code, randomDataForEmail());
+        postRequest(endPoint, code, randomDataForEmail(contactId));
 
     //    у меня есть  метод пост, в него надо передать данные, описаные в randomDataForEmail
     }
 
     // метод для обновления имейла
-    public void updateEmail(Integer code, Integer emailId) {
+    public void updateEmail(Integer code, Integer emailId, Integer contactId) {
         String endPoint = "/api/email";
-        putRequest(endPoint, code, randomDataForAddEmail(emailId));
+        putRequest(endPoint, code, randomDataForAddEmail(emailId, contactId));
     }
 
     // удаляю имейл по его ID
@@ -49,9 +49,9 @@ public class EmailApi extends ApiBase {
         return response;
     }
 
-    public Response getAllEmailsBycontactId(Integer code){
+    public Response getAllEmailsBycontactId(Integer code, Integer contactId){
         String endPoint = "/api/email/{contactId}/all";
-        response = getRequestWithParam(endPoint, code, "contactId",4804);
+        response = getRequestWithParam(endPoint, code, "contactId",contactId);
         return response;
     }
 
