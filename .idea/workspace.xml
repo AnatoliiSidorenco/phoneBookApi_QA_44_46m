@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6860c9b6-0b80-43a6-992c-4c3e8578e693" name="Changes" comment="phone commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/helpers/EmailHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/helpers/PhoneHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/address/AddressApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/helpers/AddressHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonAddressTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/schemas/address/AddressDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/email/EmailApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/email/EmailApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/phone/PhoneApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/phone/PhoneApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonEmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonEmailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonPhoneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonPhoneTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +58,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Education/QA_44_46m/All_In_QA/QA_Leo/lessonApiTests",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Education/Homework_44_46m/JavaHomework_qa_44_46&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Lesson.emaillesson" />
@@ -75,7 +74,25 @@
       <recent name="api" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CommonPhoneTest.createEditDeletePhoneTest">
+  <component name="RunManager" selected="TestNG.CommonAddressTest.createEditDeleteAddressTest">
+    <configuration name="CommonAddressTest.createEditDeleteAddressTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBookApi_QA_44_46m.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="api.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="api.tests" />
+      <option name="MAIN_CLASS_NAME" value="api.tests.CommonAddressTest" />
+      <option name="METHOD_NAME" value="createEditDeleteAddressTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CommonEmailTest.add" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBookApi_QA_44_46m.test" />
       <extension name="coverage">
@@ -148,31 +165,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Email_2Test.add2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBookApi_QA_44_46m.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="email_2variant.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="email_2variant" />
-      <option name="MAIN_CLASS_NAME" value="email_2variant.Email_2Test" />
-      <option name="METHOD_NAME" value="add2" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CommonAddressTest.createEditDeleteAddressTest" />
         <item itemvalue="TestNG.CommonPhoneTest.createEditDeletePhoneTest" />
         <item itemvalue="TestNG.CommonEmailTest.delete_Email" />
         <item itemvalue="TestNG.CommonEmailTest.update" />
         <item itemvalue="TestNG.CommonEmailTest.add" />
-        <item itemvalue="TestNG.Email_2Test.add2" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682446324338</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="phone commit">
+      <created>1682697477200</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682697477200</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

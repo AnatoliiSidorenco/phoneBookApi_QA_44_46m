@@ -16,8 +16,6 @@ public class PhoneApi extends ApiBase {
         return dto;
     }
 
-    int contactId;
-
     public PhoneDto randomDataForExistingPhone(Integer phoneId,Integer contactId) {
         dto = new PhoneDto();
         dto.setCountryCode("+49");
