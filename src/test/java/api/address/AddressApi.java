@@ -3,7 +3,6 @@ package api.address;
 import api.ApiBase;
 import io.restassured.response.Response;
 import schemas.address.AddressDto;
-import schemas.phone.PhoneDto;
 
 public class AddressApi extends ApiBase {
     Response response;
@@ -58,10 +57,4 @@ public class AddressApi extends ApiBase {
         return response;
     }
 
-    //todo-----------------------Метод что б вытянуть addressId------------------------------------------------------------------------------------
-    public Integer getAddressId(Integer contactId) {
-       response = getAllAddressByContactId(200, contactId);
-        int addressId = response.jsonPath().getInt("[0].id");
-        return addressId;
-    }
 }

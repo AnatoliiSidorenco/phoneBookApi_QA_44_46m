@@ -7,13 +7,15 @@ import org.testng.Assert;
 public class PhoneHelper {
     PhoneApi phoneApi = new PhoneApi();
 
-    public void addNewPhone(Integer contactId) {
+    public int addNewPhone(Integer contactId) {
         phoneApi.createPhone(201, contactId);
         Response response = phoneApi.getAllPhoneByContactId(200, contactId);
+        Integer phoneId = response.jsonPath().getInt("[0].id");
         String phone = response.jsonPath().getString("[0].phoneNumber");
         String countryCode = response.jsonPath().getString("[0].countryCode");
         Assert.assertEquals(phone, phoneApi.randomDataForCreatePhone(contactId).getPhoneNumber(), "Created phone is not equals");
         Assert.assertEquals(countryCode, phoneApi.randomDataForCreatePhone(contactId).getCountryCode(), "Created countryCode is not equals");
+        return phoneId;
     }
 
     public void updateExistedPhone(Integer phoneId, Integer contactId) {
@@ -31,8 +33,19 @@ public class PhoneHelper {
         Assert.assertEquals(errorMessage.jsonPath().getString("message"), "Error! This phone number doesn't exist in our DB");
     }
 
-//todo-----------------------Метод что б вытянуть phoneId------------------------------------------------------------------------------------
-    public Integer getPhoneId(Integer contactId) {
+//todo-----------------------Другой способ под него тесты commonPhone------------------------------------------------------------------------------------
+
+    public void addNewPhoneMy(Integer contactId) {
+        phoneApi.createPhone(201, contactId);
+        Response response = phoneApi.getAllPhoneByContactId(200, contactId);
+        String phone = response.jsonPath().getString("[0].phoneNumber");
+        String countryCode = response.jsonPath().getString("[0].countryCode");
+        Assert.assertEquals(phone, phoneApi.randomDataForCreatePhone(contactId).getPhoneNumber(), "Created phone is not equals");
+        Assert.assertEquals(countryCode, phoneApi.randomDataForCreatePhone(contactId).getCountryCode(), "Created countryCode is not equals");
+
+    }
+
+    public Integer getPhoneIdMy(Integer contactId) {
         Response response = phoneApi.getAllPhoneByContactId(200, contactId);
         int phoneId = response.jsonPath().getInt("[0].id");
         return phoneId;

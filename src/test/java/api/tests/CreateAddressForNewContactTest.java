@@ -1,18 +1,17 @@
 package api.tests;
 
-import api.address.AddressApi;
 import api.helpers.AddressHelper;
+import api.helpers.ContactHelper;
 import org.testng.annotations.Test;
 
-public class CommonAddressTest {
+public class CreateAddressForNewContactTest {
     AddressHelper addressHelper = new AddressHelper();
-    AddressApi addressApi = new AddressApi();
 
-    int contactId = 4804;
+    ContactHelper contactHelper = new ContactHelper();
 
-    //int addressId = addressHelper.getAddressId(contactId);
     @Test
-    public void createEditDeleteAddressTest() {
+    public void lifeCycleAddress() {
+        Integer contactId = contactHelper.createContact();
         int addressId = addressHelper.addNewAddress(contactId);
         addressHelper.updateExistedAddress(addressId, contactId);
         addressHelper.deleteExistedAddress(addressId);

@@ -8,14 +8,14 @@ public class EmailApi extends ApiBase {
     Response response;
     EmailDto dto;
 
-    public EmailDto randomDataForEmail(Integer contactId) {
+    public EmailDto randomDataBodyForCreateEmail(Integer contactId) {
         dto = new EmailDto();
         dto.setEmail("sty@gmail.com");
         dto.setContactId(contactId);
         return dto;
     }
 
-    public EmailDto randomDataForAddEmail(Integer emailId,Integer contactId) {
+    public EmailDto randomDataBodyForEditEmail(Integer emailId, Integer contactId) {
         dto = new EmailDto();
         dto.setEmail("st@gmail.com");
         dto.setContactId(contactId);
@@ -24,32 +24,32 @@ public class EmailApi extends ApiBase {
     }
 
     //создаю метод для создания имейла
-    public void addEmail(Integer code, Integer contactId) {
+    public void createNewEmail(Integer code, Integer contactId) {
         String endPoint = "/api/email";
-        postRequest(endPoint, code, randomDataForEmail(contactId));
+        postRequest(endPoint, code, randomDataBodyForCreateEmail(contactId));
 
-    //    у меня есть  метод пост, в него надо передать данные, описаные в randomDataForEmail
+    //    у меня есть метод пост, в него надо передать данные, описаные в randomDataForEmail
     }
 
     // метод для обновления имейла
-    public void updateEmail(Integer code, Integer emailId, Integer contactId) {
+    public void editExistingEmail(Integer code, Integer emailId, Integer contactId) {
         String endPoint = "/api/email";
-        putRequest(endPoint, code, randomDataForAddEmail(emailId, contactId));
+        putRequest(endPoint, code, randomDataBodyForEditEmail(emailId, contactId));
     }
 
     // удаляю имейл по его ID
-    public void deleteEmail(Integer code, int emailId) {
+    public void deleteExistingEmail(Integer code, int emailId) {
         String endpoint = "/api/email/{id}";
         deleteRequest(endpoint, code, emailId);
     }
 
-    public Response getEmailByEmailId(Integer code, int emailId) {
+    public Response getEmail(Integer code, int emailId) {
         String endpoint = "/api/email/{id}";
         response = getRequestWithParam(endpoint, code,"id", emailId); //у имейла в боди приходит tmail id как "id"
         return response;
     }
 
-    public Response getAllEmailsBycontactId(Integer code, Integer contactId){
+    public Response getAllEmails(Integer code, Integer contactId){
         String endPoint = "/api/email/{contactId}/all";
         response = getRequestWithParam(endPoint, code, "contactId",contactId);
         return response;

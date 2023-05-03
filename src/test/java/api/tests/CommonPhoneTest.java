@@ -7,10 +7,11 @@ public class CommonPhoneTest {
     PhoneHelper phoneHelper = new PhoneHelper();
     int contactId = 4804;
 
+
     @Test
     public void createEditDeletePhoneTest() {
-        phoneHelper.addNewPhone(contactId);
-        Integer phoneId = phoneHelper.getPhoneId(contactId);
+        phoneHelper.addNewPhoneMy(contactId);
+        Integer phoneId = phoneHelper.getPhoneIdMy(contactId);
         phoneHelper.updateExistedPhone(phoneId, contactId);
         phoneHelper.deleteExistedPhone(phoneId);
     }
