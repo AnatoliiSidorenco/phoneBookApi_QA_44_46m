@@ -15,5 +15,6 @@ public class CreateAddressForNewContactTest {
         int addressId = addressHelper.addNewAddress(contactId);
         addressHelper.updateExistedAddress(addressId, contactId);
         addressHelper.deleteExistedAddress(addressId);
+        contactHelper.deleteContact(contactId);
     }
 }

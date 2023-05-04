@@ -14,13 +14,9 @@ public class CreateEmailForNewContactTest {
     @Test
     public void createEmailForNewContact() {
         Integer contactId = contactHelper.createContact();
-
-
         Integer emailId = emailHelper.createEmail(contactId);
-
-        emailHelper.editEmail(emailId, contactId);
+        emailHelper.updateExistedEmail(emailId, contactId);
         emailHelper.deleteEmail(emailId);
-
         contactHelper.deleteContact(contactId);
 
     }

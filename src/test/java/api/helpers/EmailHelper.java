@@ -14,7 +14,7 @@ public class EmailHelper extends  EmailApi{
         Assert.assertEquals(email, randomDataBodyForCreateEmail(contactId).getEmail(), "Created emails is not equals");
         return emailId;
     }
-    public void editEmail(Integer emailId, Integer contactId) {
+    public void updateExistedEmail(Integer emailId, Integer contactId) {
         editExistingEmail(200, emailId, contactId);
         Response editedEmails = getAllEmails(200, contactId);
         String editedEmail = editedEmails.jsonPath().getString("[0].email");

@@ -14,5 +14,6 @@ public class CreatePhoneForNewContactTest {
         Integer phoneId = phoneHelper.addNewPhone(contactId);
         phoneHelper.updateExistedPhone(phoneId, contactId);
         phoneHelper.deleteExistedPhone(phoneId);
+        contactHelper.deleteContact(contactId);
     }
 }

@@ -52,7 +52,7 @@ public class CommonEmailTest {
     @Test
     public void createEditDeleteContactEmailTest() {
         Integer emailId = emailHelper.createEmail(contactId);
-        emailHelper.editEmail(emailId, contactId);
+        emailHelper.updateExistedEmail(emailId, contactId);
         emailHelper.deleteEmail(emailId);
     }
 

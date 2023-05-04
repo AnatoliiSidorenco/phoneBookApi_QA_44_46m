@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860c9b6-0b80-43a6-992c-4c3e8578e693" name="Changes" comment="address commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/helpers/ContactHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/CreateAddressForNewContactTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/CreateEmailForNewContactTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/CreatePhoneForNewContactTest.java" afterDir="false" />
+    <list default="true" id="6860c9b6-0b80-43a6-992c-4c3e8578e693" name="Changes" comment="changes in Address and Phone">
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/CreateEmailPhoneAddressForContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/address/AddressApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/address/AddressApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/ContactApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/ContactApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/email/EmailApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/email/EmailApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/helpers/AddressHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/helpers/AddressHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/helpers/EmailHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/helpers/EmailHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/helpers/PhoneHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/helpers/PhoneHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonAddressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonAddressTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonContactTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonEmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonEmailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CommonPhoneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CommonPhoneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CreateAddressForNewContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CreateAddressForNewContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CreateEmailForNewContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CreateEmailForNewContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CreatePhoneForNewContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CreatePhoneForNewContactTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +75,7 @@
       <recent name="api" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CommonPhoneTest.createEditDeletePhoneTest">
+  <component name="RunManager" selected="TestNG.CreateEmailPhoneAddressForContact.lifeCycleOfEmailPhoneAddressInContact">
     <configuration name="CommonAddressTest.createEditDeleteAddressTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBookApi_QA_44_46m.test" />
       <extension name="coverage">
@@ -138,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateEmailForNewContactTest.createEmailForNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateEmailPhoneAddressForContact.lifeCycleOfEmailPhoneAddressInContact" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBookApi_QA_44_46m.test" />
       <extension name="coverage">
         <pattern>
@@ -147,8 +139,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="api.tests" />
-      <option name="MAIN_CLASS_NAME" value="api.tests.CreateEmailForNewContactTest" />
-      <option name="METHOD_NAME" value="createEmailForNewContact" />
+      <option name="MAIN_CLASS_NAME" value="api.tests.CreateEmailPhoneAddressForContact" />
+      <option name="METHOD_NAME" value="lifeCycleOfEmailPhoneAddressInContact" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -176,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CommonPhoneTest.createEditDeletePhoneTest" />
-        <item itemvalue="TestNG.CommonAddressTest.createEditDeleteAddressTest" />
+        <item itemvalue="TestNG.CreateEmailPhoneAddressForContact.lifeCycleOfEmailPhoneAddressInContact" />
         <item itemvalue="TestNG.CreateAddressForNewContactTest.lifeCycleAddress" />
         <item itemvalue="TestNG.CreatePhoneForNewContactTest.lifeCycleOfPhone" />
-        <item itemvalue="TestNG.CreateEmailForNewContactTest.createEmailForNewContact" />
+        <item itemvalue="TestNG.CommonPhoneTest.createEditDeletePhoneTest" />
+        <item itemvalue="TestNG.CommonAddressTest.createEditDeleteAddressTest" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682963993598</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changes in Address and Phone">
+      <created>1683140667097</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683140667097</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,7 +261,8 @@
     <MESSAGE value="gh1" />
     <MESSAGE value="phone commit" />
     <MESSAGE value="address commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="address commit" />
+    <MESSAGE value="changes in Address and Phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in Address and Phone" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
